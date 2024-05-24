@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Redirect</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lista de números de telefone para redirecionar
+            const phoneNumbers = [
+                '5511999999999',
+                '5511888888888'
+            ];
+
+            // Função para escolher um número aleatório
+            function getRandomPhoneNumber() {
+                const randomIndex = Math.floor(Math.random() * phoneNumbers.length);
+                return phoneNumbers[randomIndex];
+            }
+
+            // Redirecionar para o WhatsApp com o número aleatório
+            const phoneNumber = getRandomPhoneNumber();
+            const whatsappUrl = `https://wa.me/${phoneNumber}`;
+            window.location.href = whatsappUrl;
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
